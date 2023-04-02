@@ -1,17 +1,60 @@
 {
+    
     "Modelo" : [
     {
-        "idModelo": "",
-        "NombreModelo":""
+        "idModelo": "1",
+        "NombreModelo":"TalonFac"
+    },
+    {
+        "idModelo": "2",
+        "NombreModelo":"Resoluciones"
     }
-            ],
+    ],
+
+
     "LineaModelo" : [
     {
-        "idLineaModelo":"",
-        "idModelo":"",
-        "Descripcion":"",
-        "Valor":""
+        "idLineaModelo":"1",
+        "idModelo":"1",
+        "Descripcion":"NroDesde",
+        "Valor":"1523"
+    },
+        
+
+    {  "idLineaModelo":"2",
+        "idModelo":"1",
+        "Descripcion":"NroHasta",
+        "Valor":"1550"
+        
+    },
+
+    {
+        "idLineaModelo":"3",
+        "idModelo":"1",
+        "Descripcion":"Cantidad",
+        "Valor":"2"
+    },
+       
+    {
+        "idLineaModelo":"2",
+        "idModelo":"1",
+        "Descripcion":"NroResolucion",
+        "Valor":"17-ar23"
+    },
+    {
+        "idLineaModelo":"2",
+        "idModelo":"2",
+        "Descripcion":"FechaResolucion",
+        "Valor":"03-03-2023"
+    },
+    {
+        "idLineaModelo":"2",
+        "idModelo":"3",
+        "Descripcion":"CantFolios",
+        "Valor":"15"
     }
-        ]
+
+]
+
 
 }
