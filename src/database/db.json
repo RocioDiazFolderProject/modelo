@@ -1,0 +1,17 @@
+{
+    "Modelo" : [
+    {
+        "idModelo": "",
+        "NombreModelo":""
+    }
+            ],
+    "LineaModelo" : [
+    {
+        "idLineaModelo":"",
+        "idModelo":"",
+        "Descripcion":"",
+        "Valor":""
+    }
+        ]
+
+}
