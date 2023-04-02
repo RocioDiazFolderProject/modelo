@@ -20,3 +20,12 @@ const deleteOneWorkouts = () => {
     
 };
 
+
+    module.exports = {
+        getAllWorkouts,
+        getOneWorkouts,
+        createNewWorkouts,
+        updateOneWorkouts,
+        deleteOneWorkouts,
+    };
+    

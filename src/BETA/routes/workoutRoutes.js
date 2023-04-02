@@ -5,7 +5,7 @@ router
     
     .get("/",(workoutController.getAllWorkouts))
     .get("/:workoutId",(workoutController.getOneWorkouts))
-    .post("/:workoutId",(workoutController.createNewWorkouts))
+    .post("/",(workoutController.createNewWorkouts))
     .patch("/:workoutId",(workoutController.updateOneWorkouts))
     .delete("/:workout",(workoutController.deleteOneWorkouts))
 

@@ -4,7 +4,7 @@ const workoutService = require("../services/workoutService");
 //para traer todos los workouts
 const getAllWorkouts =(req,res)=>{
     const allWorkout = workoutService.getAllWorkouts();
-    res.send("Get alls workouts"); 
+    res.send({status:'ok', data:allWorkout}); 
 };
 //toma 1 workouts por Id (en este ejemplo)
 const getOneWorkouts = (req,res)=>{
