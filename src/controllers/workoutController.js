@@ -13,8 +13,18 @@ const getOneWorkouts = (req,res)=>{
 };
 //crea un nuevo workouts por Id
 const createNewWorkouts = (req,res) =>{
-    const createWorkout = workoutService.createNewWorkouts(req.params.workoutId);
-    res.send(`Create workout ${req.params.workoutId}`);
+    const {Modelo} = req;
+    if (!Modelo.NombreModelo); //sino tiene nombre el modelo nuevo no lo crea
+    {
+        return;
+    }
+    
+    const newModelo = {                     //constante del objeto Modelo
+        Nombre : Modelo.NombreModelo        //variable Nombre donde recibe lo que va a dejar en Modelo.NombreModelo
+    };
+
+    const createWorkout = workoutService.createNewWorkouts(newModelo);
+    res.status(201).send({status:"ok",data:createWorkout});
 };
 
 //actualiza un por Id, puede ser de a un campo la actualización y no de todo el registro

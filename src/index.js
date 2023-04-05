@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000; //configura el puerto de acceso a la app
 /*app.get('/',(req,res)=>{ 
     res.send('probando escucha');
 });*/
-
+app.use(express, json[]);
 app.use("/api/BETA/workouts", betaworkoutRouter); //aqui le indico que la api es la de beta y se comunique a traves de router
 
 
