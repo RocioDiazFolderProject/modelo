@@ -1,9 +1,9 @@
 const DB = require("./db.json");
-const { saveToDatabase } = require("/utils.js");
+const { saveToDatabase } = require("./util");
 
 
 const getAllWorkouts = () => {
-    return DB.workout;
+    return DB.Modelo;
 }; 
 
 const createNewWorkouts = (newModelo) => {

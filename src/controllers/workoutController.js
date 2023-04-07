@@ -1,5 +1,5 @@
 //importar los servicios del modelo
-const workoutService = require("../services/workoutService");
+const workoutService = require("../../src/services/workoutService");
 //son los que intervienen entre la app y el db, no tocan aun la bd, todo aqui se debe almacenar en los json o similares
 //para traer todos los workouts
 const getAllWorkouts =(req,res)=>{
