@@ -2,12 +2,12 @@ const DB = require("./db.json");
 const { saveToDatabase } = require("./util");
 
 
-const getAllWorkouts = () => {
-    return DB.Modelo;
+const getAllLinMod = () => {
+    return DB.LineaModelo;
 }; 
 
-const createNewWorkouts = (newModelo) => {
-    const isAlreadyAdded = DB.Modelo.findIndex(Modelo => {Modelo.NombreModelo = newModelo.NombreModelo} //pregunta si ya existe
+const createNewLinMod = (newLinMod) => {
+    const isAlreadyAdded = DB.LineaModelo.findIndex(LineaModelo => {LineaModelo.Descripcion = newModelo.Nombre} //pregunta si ya existe
         );
     if (isAlreadyAdded){ //si existe en el json no hace nada
         return;

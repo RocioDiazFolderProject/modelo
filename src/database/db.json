@@ -1,60 +1,14 @@
 {
     
-    "Modelo" : [
-    {
-        "idModelo": "1",
-        "NombreModelo":"TalonFac"
-    },
-    {
-        "idModelo": "2",
-        "NombreModelo":"Resoluciones"
-    }
-    ],
+    "Modelo" : [{ "ModeloId" : "1", "Nombre" : "Factura"},
+    { "ModeloId" : "2", "Nombre" : "Resolución"}],
 
-
-    "LineaModelo" : [
-    {
-        "idLineaModelo":"1",
-        "idModelo":"1",
-        "Descripcion":"NroDesde",
-        "Valor":"1523"
-    },
-        
-
-    {  "idLineaModelo":"2",
-        "idModelo":"1",
-        "Descripcion":"NroHasta",
-        "Valor":"1550"
-        
-    },
-
-    {
-        "idLineaModelo":"3",
-        "idModelo":"1",
-        "Descripcion":"Cantidad",
-        "Valor":"2"
-    },
-       
-    {
-        "idLineaModelo":"2",
-        "idModelo":"1",
-        "Descripcion":"NroResolucion",
-        "Valor":"17-ar23"
-    },
-    {
-        "idLineaModelo":"2",
-        "idModelo":"2",
-        "Descripcion":"FechaResolucion",
-        "Valor":"03-03-2023"
-    },
-    {
-        "idLineaModelo":"2",
-        "idModelo":"3",
-        "Descripcion":"CantFolios",
-        "Valor":"15"
-    }
-
-]
+    "LineaModelo":[{"LinModId" : "1", "ModeloId":"1", "Descripcion":"Fecha", "Valor":"15/05/22"},
+    {"LinModId" : "2", "ModeloId":"1", "Descripcion":"Nro", "Valor":"20"},
+    {"LinModId" : "3", "ModeloId":"2", "Descripcion":"Fecha", "Valor":"30/05/22"},
+    {"LinModId" : "4", "ModeloId":"2", "Descripcion":"Nro", "Valor":"1720"},
+    {"LinModId" : "5", "ModeloId":"1", "Descripcion":"CantTalon", "Valor":"5"},
+    {"LinModId" : "6", "ModeloId":"2", "Descripcion":"NroActa", "Valor":"658A"} ]
 
 
 }

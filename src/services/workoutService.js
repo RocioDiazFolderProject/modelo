@@ -1,39 +1,39 @@
 //const {v4:uuid} = require ('uuid'); //crea numeros aleatorios, por seguridad, para los id
 const { uuid } = require('uuidv4');
-const getAllWorkouts = () => {
+const getAllModelo = () => {
     return;
     
     
 };
-const getOneWorkouts = () => {
+const getOneModelo = () => {
     return;
    
 };
-const createNewWorkouts = (newModelo) => {
+const createNewModelo = (newModelo) => {
     const modeloToInsert = {
         ...newModelo,
-        id:uuid()
+        
         
     };
     const createWorkout = workout.createNewWorkouts(modeloToInsert);
     return createNewWorkouts;
     
-};
-const updateOneWorkouts = () => {
-    return;
+ }//;
+// const updateOneWorkouts = () => {
+//     return;
     
-};
-const deleteOneWorkouts = () => {
-    return;
-    //commit
-};
+// };
+// const deleteOneWorkouts = () => {
+//     return;
+//     //commit
+// };
 
 
     module.exports = {
-        getAllWorkouts,
-        getOneWorkouts,
-        createNewWorkouts,
-        updateOneWorkouts,
-        deleteOneWorkouts,
+        getAllModelo,
+        getOneModelo,
+        createNewModelo
+        // updateOneWorkouts,
+        // deleteOneWorkouts,
     };
     
