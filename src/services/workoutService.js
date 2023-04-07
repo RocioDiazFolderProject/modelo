@@ -1,5 +1,5 @@
 //const {v4:uuid} = require ('uuid'); //crea numeros aleatorios, por seguridad, para los id
-
+const { uuid } = require('uuidv4');
 const getAllWorkouts = () => {
     return;
     
@@ -11,8 +11,8 @@ const getOneWorkouts = () => {
 };
 const createNewWorkouts = (newModelo) => {
     const modeloToInsert = {
-        ...newModelo
-      //  id:uuid()
+        ...newModelo,
+        id:uuid()
         
     };
     const createWorkout = workout.createNewWorkouts(modeloToInsert);
