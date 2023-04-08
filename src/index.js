@@ -3,17 +3,38 @@ const betaworkoutRouter = require("./BETA/routes/workoutRoutes"); // le damos a 
 const { getAllModelo } = require('./services/workoutService');
 const app = express(); // para la app requiere express
 
+
+const mysql = require('mysql');
+
+
 const PORT = process.env.PORT || 3000; //configura el puerto de acceso a la app
 
-/*app.get('/',(req,res)=>{ 
-    res.send('probando escucha');
-});*/
+
 app.use(express.json());
-app.use("./src/BETA/routes", betaworkoutRouter); //aqui le indico que la api es la de beta y se comunique a traves de router
+
+//conexión a mysql
+
+const conector = mysql.createConnection({
+    host : 'localhost',
+    user : 'root',
+    password : 'ROSEVI007',
+    database : 'Modelo'
+});
+
+//chequeo la conexión a la base
+
+conector.connect(error => {
+    if (error) throw error;
+    console.log('Conectado');
+});
 
 
 app.listen(PORT, () =>{
     console.log(`server escuchando en el puerto ${PORT}`)});
+
+app.use("./src/BETA/routes", betaworkoutRouter); //aqui le indico que la api es la de beta y se comunique a traves de router
+
+
 
 
 
