@@ -1,5 +1,6 @@
 const express = require('express'); //coloca express como constante
 const betaworkoutRouter = require("./BETA/routes/workoutRoutes"); // le damos a que version conectarse en este caso es la API de prueba
+const { getAllModelo } = require('./services/workoutService');
 const app = express(); // para la app requiere express
 
 const PORT = process.env.PORT || 3000; //configura el puerto de acceso a la app

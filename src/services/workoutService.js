@@ -15,8 +15,8 @@ const createNewModelo = (newModelo) => {
         
         
     };
-    const createWorkout = workout.createNewWorkouts(modeloToInsert);
-    return createNewWorkouts;
+    const createModelo = Modelo.createNewModelo(modeloToInsert);
+    return createModelo;
     
  }//;
 // const updateOneWorkouts = () => {

@@ -3,13 +3,22 @@ const workoutService = require("../../src/services/workoutService");
 //son los que intervienen entre la app y el db, no tocan aun la bd, todo aqui se debe almacenar en los json o similares
 //para traer todos los workouts
 const getAllModelo=(req,res)=>{
-    const allWorkout = workoutService.getAllModelo();
-    res.send({status:'ok', data:allWorkout}); 
+    const allModelo = workoutService.getAllModelo();
+    res.send({status:'ok', data:allModelo}); 
+   
+};
+const getAllLinMod = (req,res) => {
+    const allLinMod = workoutService.getAllLinMod();
+    res.send({status:"ok",data:allLinMod});
 };
 //toma 1 workouts por Id (en este ejemplo)
 const getOneModelo= (req,res)=>{
-    const oneWorkout = workoutService.getOneWorkouts(req.params.workoutId);
-    res.send(`Get workout ${req.params.workoutId}`);
+    const oneModelo = workoutService.getOneModelo(req.params.Modelo.Nombre);
+    res.send(`Get Modelo ${req.params.Modelo.Nombre}`);
+};
+
+const getOneLinMod = (req,res) =>{
+    const oneLinMod = workoutService.getOneLinMod(req.params.LinMod.Descripcion)
 };
 //crea un nuevo workouts por Id
 const createNewModelo = (req,res) =>{
@@ -26,7 +35,7 @@ const createNewModelo = (req,res) =>{
 
     const createModelo = workoutService.createNewModelo(newModelo);
     res.status(201).send({status:"ok",data:createModelo});
-}
+};
 const createNewLinMod= (req,res) =>{
     const {LinMod} = req;
     if (!LinMod.Descripcion); //sino tiene descirpicion la linea el lineamodelo nuevo no lo crea
@@ -37,13 +46,15 @@ const createNewLinMod= (req,res) =>{
     const newLinMod = {     
         Id : LineaModelo.Id, 
         ModId : LineaModelo.ModeloId,               //constante del objeto Modelo
-        Nombre : LineaModelo.Descripcion,        //variable Nombre donde recibe lo que va a dejar en Modelo.NombreModelo
+        Nombre : LineaModelo.Descripcion,        //variable Nombre donde recibe lo que va a dejar en LineaModelo.descripcion
         Valor: LineaModelo.Valor
     };
 
-    const createModelo = workoutService.createNewModelo(newModelo);
-    res.status(201).send({status:"ok",data:createModelo});
-}
+    const createLinMod = workoutService.createNewLinMod(newLinMod);
+    res.status(201).send({status:"ok",data:createLinMod});
+
+
+};
 
 //actualiza un por Id, puede ser de a un campo la actualización y no de todo el registro
 // const updateOneWorkouts = (req,res) =>{
@@ -60,7 +71,10 @@ const createNewLinMod= (req,res) =>{
 module.exports = {
     getAllModelo,
     getOneModelo,
-    createNewModelo
+    createNewModelo,
+    getAllLinMod,
+    getOneLinMod,
+    createNewLinMod
     // updateOneWorkouts,
     // deleteOneWorkouts,
 };

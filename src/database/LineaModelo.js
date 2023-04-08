@@ -13,7 +13,7 @@ const createNewLinMod = (newLinMod) => {
         return;
     }
     DB.Modelo.push(newModelo);//colocar el nuevo dato en el modelo json
-    saveToDatabase(DB);//grabar
+    saveToDatabase(DB.LineaModelo);//grabar
 };
 
 module.exports = {getAllWorkouts,

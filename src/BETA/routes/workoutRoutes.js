@@ -4,8 +4,11 @@ const workoutController = require("../../controllers/workoutController");
 router
     
     .get("/",(workoutController.getAllModelo))
-    .get("/:workoutId",(workoutController.getOneModelo))
-    .post("/",(workoutController.createNewWorkouts))
+    .get("/:Nombre",(workoutController.getOneModelo))
+    .post("/",(workoutController.createNewModelo))
+    .get("/",(workoutController.getAllLinMod))
+    .get("/:Descripcion",(workoutController.getOneLinMod))
+    .get("/",(workoutController.createNewLinMod))
     // .patch("/:workoutId",(workoutController.updateOneWorkouts))
     // .delete("/:workout",(workoutController.deleteOneWorkouts))
 
