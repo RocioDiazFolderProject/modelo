@@ -35,8 +35,23 @@ const getAllModelo=(req,res)=>{
    
 };
 const getAllLinMod = (req,res) => {
-    const allLinMod = workoutService.getAllLinMod();
-    res.send({status:"ok",data:allLinMod});
+    // const allLinMod = workoutService.getAllLinMod();
+    // res.send({status:"ok",data:allLinMod});
+
+    const query = "SELECT * FROM modelo.lineamodelo";
+    console.log(query);
+    
+    conector.query(query,(error,results)=>{
+        if (error) throw error;
+        console.log(results);
+        if (results){
+            res.json(results);
+        }else{
+            res.send('sin resultado');
+        }
+
+    });
+   
 };
 //toma 1 modelo por nombre (en este ejemplo)
  const getOneModelo= (req,res)=>{
