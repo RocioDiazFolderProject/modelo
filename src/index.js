@@ -36,5 +36,7 @@ app.use("/src/BETA/router", betaworkoutRouter); //aqui le indico que la api es l
 
 
 
-
+module.exports = {
+    conector
+};
 

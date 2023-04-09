@@ -1,10 +1,37 @@
 //importar los servicios del modelo
 const workoutService = require("../../src/services/workoutService");
+const mysql = require('mysql');
+const conector = mysql.createConnection({
+    host : 'localhost',
+    user : 'root',
+    password : 'ROSEVI007',
+    database : 'Modelo'
+});
+
+//chequeo la conexión a la base
+
+conector.connect(error => {
+    if (error) throw error;
+    console.log('Conectado');
+});
 //son los que intervienen entre la app y el db, no tocan aun la bd, todo aqui se debe almacenar en los json o similares
 //para traer todos los workouts
 const getAllModelo=(req,res)=>{
-    const allModelo = workoutService.getAllModelo();
-    res.send({status:"ok - estamos en getAllModelo", data:allModelo}); 
+    // const allModelo = workoutService.getAllModelo();
+    // res.send({status:"ok - estamos en getAllModelo", data:allModelo}); 
+    const mysAllModelo = "select * from Modelo";
+    console.log(mysAllModelo);
+    
+    conector.query(mysAllModelo,(error,results)=>{
+        if (error) throw error;
+        console.log(results.lenght);
+        if (results.lenght > 0){
+            res.json(results);
+        }else{
+            res.send('sin resultado');
+        }
+
+    });
    
 };
 const getAllLinMod = (req,res) => {
