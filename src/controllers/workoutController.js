@@ -19,13 +19,13 @@ conector.connect(error => {
 const getAllModelo=(req,res)=>{
     // const allModelo = workoutService.getAllModelo();
     // res.send({status:"ok - estamos en getAllModelo", data:allModelo}); 
-    const mysAllModelo = "select * from Modelo";
-    console.log(mysAllModelo);
+    const query = "SELECT * FROM modelo.modelo";
+    console.log(query);
     
-    conector.query(mysAllModelo,(error,results)=>{
+    conector.query(query,(error,results)=>{
         if (error) throw error;
-        console.log(results.lenght);
-        if (results.lenght > 0){
+        console.log(results);
+        if (results){
             res.json(results);
         }else{
             res.send('sin resultado');
