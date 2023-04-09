@@ -1,0 +1,11 @@
+{
+    
+    "LineaModelo":[{"LinModId" : "1", "ModeloId":"1", "Descripcion":"Fecha", "Valor":"15/05/22"},
+    {"LinModId" : "2", "ModeloId":"1", "Descripcion":"Nro", "Valor":"20"},
+    {"LinModId" : "3", "ModeloId":"2", "Descripcion":"Fecha", "Valor":"30/05/22"},
+    {"LinModId" : "4", "ModeloId":"2", "Descripcion":"Nro", "Valor":"1720"},
+    {"LinModId" : "5", "ModeloId":"1", "Descripcion":"CantTalon", "Valor":"5"},
+    {"LinModId" : "6", "ModeloId":"2", "Descripcion":"NroActa", "Valor":"658A"} ]
+
+
+}
