@@ -14,29 +14,10 @@ conector.connect(error => {
     if (error) throw error;
     console.log('Conectado');
 });
-//son los que intervienen entre la app y el db, no tocan aun la bd, todo aqui se debe almacenar en los json o similares
-//para traer todos los workouts
-// const getAllModelo=(req,res)=>{
-//     // const allModelo = workoutService.getAllModelo();
-//     // res.send({status:"ok - estamos en getAllModelo", data:allModelo}); 
-//     const query = "SELECT * FROM modelo.modelo";
-//     console.log(query);
-    
-//     conector.query(query,(error,results)=>{
-//         if (error) throw error;
-//         console.log(results);
-//         if (results){
-//             res.json(results);
-//         }else{
-//             res.send('sin resultado');
-//         }
 
-//     });
-   
-// };
+
 const getAllLinMod = (req,res) => {
-    // const allLinMod = workoutService.getAllLinMod();
-    // res.send({status:"ok",data:allLinMod});
+
 
     const query = "SELECT * FROM modelo.lineamodelo";
     console.log(query);
