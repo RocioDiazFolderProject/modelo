@@ -5,7 +5,9 @@ const { saveToDatabase } = require("./util");
 const getAllModelo = () => {
     return DB.Modelo;
 }; 
-
+const getOneModelo = (Nombre) => {
+    return DB.Modelo.findIndex(Modelo => {Modelo.Nombre = newModelo.Nombre});
+};
 const createNewModelo = (newModelo) => {
     const isAlreadyAdded = DB.Modelo.findIndex(Modelo => {Modelo.Nombre = newModelo.Nombre} //pregunta si ya existe
         );
@@ -17,6 +19,7 @@ const createNewModelo = (newModelo) => {
 };
 
 module.exports = {getAllModelo,
-                    createNewModelo};
+                    createNewModelo,
+                    getOneModelo};
 
 

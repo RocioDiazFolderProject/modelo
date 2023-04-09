@@ -4,18 +4,18 @@ const workoutService = require("../../src/services/workoutService");
 //para traer todos los workouts
 const getAllModelo=(req,res)=>{
     const allModelo = workoutService.getAllModelo();
-    res.send({status:"ok", data:allModelo}); 
+    res.send({status:"ok - estamos en getAllModelo", data:allModelo}); 
    
 };
 const getAllLinMod = (req,res) => {
     const allLinMod = workoutService.getAllLinMod();
     res.send({status:"ok",data:allLinMod});
 };
-//toma 1 workouts por Id (en este ejemplo)
-const getOneModelo= (req,res)=>{
-    const oneModelo = workoutService.getOneModelo(req.params.Modelo.Nombre);
-    res.send(`Get Modelo ${req.params.Modelo.Nombre}`);
-};
+//toma 1 modelo por nombre (en este ejemplo)
+ const getOneModelo= (req,res)=>{
+   const oneModelo = workoutService.getOneModelo(req.params.Nombre);
+    res.send(`Get Modelo ${req.params.Nombre}`);
+}; 
 
 const getOneLinMod = (req,res) =>{
     const oneLinMod = workoutService.getOneLinMod(req.params.LinMod.Descripcion)

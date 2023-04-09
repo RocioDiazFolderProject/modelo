@@ -1,10 +1,12 @@
 //const {v4:uuid} = require ('uuid'); //crea numeros aleatorios, por seguridad, para los id
 const { uuid } = require('uuidv4');
 const getAllModelo = () => {
+    
     return;
    
 };
 const getOneModelo = () => {
+
     return;
    
 };

@@ -16,7 +16,7 @@ const createNewLinMod = (newLinMod) => {
     saveToDatabase(DB.LineaModelo);//grabar
 };
 
-module.exports = {getAllWorkouts,
-                    createNewWorkouts};
+module.exports = {getAllLinMod,
+                    createNewLinMod};
 
 
