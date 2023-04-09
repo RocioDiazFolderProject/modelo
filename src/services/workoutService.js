@@ -2,8 +2,7 @@
 const { uuid } = require('uuidv4');
 const getAllModelo = () => {
     return;
-    
-    
+   
 };
 const getOneModelo = () => {
     return;
@@ -18,7 +17,7 @@ const createNewModelo = (newModelo) => {
     const createModelo = Modelo.createNewModelo(modeloToInsert);
     return createModelo;
     
- }//;
+ };
 // const updateOneWorkouts = () => {
 //     return;
     

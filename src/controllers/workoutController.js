@@ -4,7 +4,7 @@ const workoutService = require("../../src/services/workoutService");
 //para traer todos los workouts
 const getAllModelo=(req,res)=>{
     const allModelo = workoutService.getAllModelo();
-    res.send({status:'ok', data:allModelo}); 
+    res.send({status:"ok", data:allModelo}); 
    
 };
 const getAllLinMod = (req,res) => {
